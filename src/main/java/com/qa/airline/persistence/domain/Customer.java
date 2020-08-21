@@ -40,6 +40,8 @@ public class Customer {
 	@Setter 
 	private String email;
 	
+	@Getter 
+	@Setter
 	@OneToMany(mappedBy = "customer")
 	private List<Booking> booking;
 	

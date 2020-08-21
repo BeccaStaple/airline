@@ -21,9 +21,13 @@ public class Booking {
 	@Setter 
 	private long id;
 	
+	@Getter 
+	@Setter
 	@ManyToOne(targetEntity = Customer.class)
 	private Customer customer;
 	
+	@Getter 
+	@Setter
 	@OneToMany(mappedBy = "booking")
 	private List<Flight> flight;
 	

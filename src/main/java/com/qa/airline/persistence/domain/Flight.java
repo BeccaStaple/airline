@@ -47,6 +47,8 @@ public class Flight {
 	@Setter
 	private String flyingTo;
 	
+	@Getter 
+	@Setter
 	@ManyToOne(targetEntity = Booking.class)
 	private Booking booking;
 	
