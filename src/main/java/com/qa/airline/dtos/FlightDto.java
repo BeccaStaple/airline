@@ -1,6 +1,5 @@
 package com.qa.airline.dtos;
 
-import java.sql.Time;
 import java.util.Date;
 
 import lombok.Getter;
@@ -16,7 +15,7 @@ public class FlightDto {
 	
 	@Getter
 	@Setter
-	private Time timeOfDeparture;
+	private String timeOfDeparture;
 	
 	@Getter
 	@Setter
@@ -35,7 +34,7 @@ public class FlightDto {
 		
 	}
 
-	public FlightDto(long id, Time timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
+	public FlightDto(long id, String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
 		super();
 		this.id = id;
 		this.timeOfDeparture = timeOfDeparture;

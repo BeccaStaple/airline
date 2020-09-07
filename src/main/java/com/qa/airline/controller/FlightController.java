@@ -27,12 +27,12 @@ public class FlightController {
 		this.service = service;
 	}
 	
-	@PostMapping("/makeBooking")
+	@PostMapping("/makeFlight")
 	public ResponseEntity<BookingDto> create(@RequestBody Booking booking) {
 		return new ResponseEntity<BookingDto>(this.service.create(booking), HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/getBooking")
+	@GetMapping("/getFlights")
 	public ResponseEntity<List<BookingDto>> read() {
 		return new ResponseEntity<List<BookingDto>>(this.service.read(), HttpStatus.OK);
 	}

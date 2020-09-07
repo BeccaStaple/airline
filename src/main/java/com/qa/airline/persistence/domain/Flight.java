@@ -1,6 +1,5 @@
 package com.qa.airline.persistence.domain;
 
-import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -27,7 +26,7 @@ public class Flight {
 	@NotNull
 	@Getter
 	@Setter
-	private Time timeOfDeparture;
+	private String timeOfDeparture;
 	
 	@Column
 	@NotNull
@@ -56,7 +55,7 @@ public class Flight {
 		
 	}
 	
-	public Flight(Time timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
+	public Flight(String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
 		super();
 		this.timeOfDeparture = timeOfDeparture;
 		this.dateOfDeparture = dateOfDeparture;
