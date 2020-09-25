@@ -3,18 +3,9 @@ package com.qa.airline.dtos;
 
 
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class BookingDto {
 
-	@Getter 
-	@Setter 
 	private long id;
-	
-
-	
-	
 
 	
 	public BookingDto() {
@@ -26,5 +17,12 @@ public class BookingDto {
 		this.id = id;
 	}
 	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 	
 }

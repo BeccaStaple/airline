@@ -2,33 +2,26 @@ package com.qa.airline.dtos;
 
 import java.util.Date;
 
-import lombok.Getter;
-import lombok.Setter;
 
 public class FlightDto {
 
 	
-	@Getter
-	@Setter
+	
 	private long id;
 	
 	
-	@Getter
-	@Setter
+
 	private String timeOfDeparture;
 	
-	@Getter
-	@Setter
+
 	private Date dateOfDeparture;
 	
-	
-	@Getter
-	@Setter
+
 	private String flyingFrom;
 	
-	@Getter
-	@Setter
 	private String flyingTo;
+	
+
 	
 	public FlightDto() {
 		
@@ -42,6 +35,48 @@ public class FlightDto {
 		this.flyingFrom = flyingFrom;
 		this.flyingTo = flyingTo;
 	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getTimeOfDeparture() {
+		return timeOfDeparture;
+	}
+
+	public void setTimeOfDeparture(String timeOfDeparture) {
+		this.timeOfDeparture = timeOfDeparture;
+	}
+
+	public Date getDateOfDeparture() {
+		return dateOfDeparture;
+	}
+
+	public void setDateOfDeparture(Date dateOfDeparture) {
+		this.dateOfDeparture = dateOfDeparture;
+	}
+
+	public String getFlyingFrom() {
+		return flyingFrom;
+	}
+
+	public void setFlyingFrom(String flyingFrom) {
+		this.flyingFrom = flyingFrom;
+	}
+
+	public String getFlyingTo() {
+		return flyingTo;
+	}
+
+	public void setFlyingTo(String flyingTo) {
+		this.flyingTo = flyingTo;
+	}
+
+	
 	
 	
 	

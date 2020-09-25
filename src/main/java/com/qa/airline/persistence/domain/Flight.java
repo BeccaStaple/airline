@@ -1,6 +1,8 @@
 package com.qa.airline.persistence.domain;
 
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,40 +10,27 @@ import javax.persistence.Id;
 
 import com.sun.istack.NotNull;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity(name = "flight")
 public class Flight {
 	
 	@Id
 	@GeneratedValue
-	@Getter
-	@Setter
 	private long id;
 	
-	@Column
+	@Column(name = "timeOfDeparture")
 	@NotNull
-	@Getter
-	@Setter
 	private String timeOfDeparture;
 	
 	@Column
 	@NotNull
-	@Getter
-	@Setter
-	private String dateOfDeparture;
+	private Date dateOfDeparture;
 	
-	@Column
+	@Column(name = "flyingFrom")
 	@NotNull
-	@Getter
-	@Setter
 	private String flyingFrom;
 	
-	@Column
+	@Column(name = "flyingTo")
 	@NotNull
-	@Getter
-	@Setter
 	private String flyingTo;
 	
 
@@ -50,11 +39,51 @@ public class Flight {
 		
 	}
 	
-	public Flight(String timeOfDeparture, String dateOfDeparture, String flyingFrom, String flyingTo) {
+	public Flight(String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
 		super();
 		this.timeOfDeparture = timeOfDeparture;
 		this.dateOfDeparture = dateOfDeparture;
 		this.flyingFrom = flyingFrom;
+		this.flyingTo = flyingTo;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getTimeOfDeparture() {
+		return timeOfDeparture;
+	}
+
+	public void setTimeOfDeparture(String timeOfDeparture) {
+		this.timeOfDeparture = timeOfDeparture;
+	}
+
+	public Date getDateOfDeparture() {
+		return dateOfDeparture;
+	}
+
+	public void setDateOfDeparture(Date dateOfDeparture) {
+		this.dateOfDeparture = dateOfDeparture;
+	}
+
+	public String getFlyingFrom() {
+		return flyingFrom;
+	}
+
+	public void setFlyingFrom(String flyingFrom) {
+		this.flyingFrom = flyingFrom;
+	}
+
+	public String getFlyingTo() {
+		return flyingTo;
+	}
+
+	public void setFlyingTo(String flyingTo) {
 		this.flyingTo = flyingTo;
 	}
 	
