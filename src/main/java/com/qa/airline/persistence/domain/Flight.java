@@ -21,7 +21,7 @@ public class Flight {
 	@NotNull
 	private String timeOfDeparture;
 	
-	@Column
+	@Column(name = "dateOfDeparture")
 	@NotNull
 	private Date dateOfDeparture;
 	
@@ -33,18 +33,21 @@ public class Flight {
 	@NotNull
 	private String flyingTo;
 	
-
+	@Column(name = "price")
+	@NotNull
+	private double price;
 	
 	public Flight() {
 		
 	}
 	
-	public Flight(String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
+	public Flight(String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo, double price) {
 		super();
 		this.timeOfDeparture = timeOfDeparture;
 		this.dateOfDeparture = dateOfDeparture;
 		this.flyingFrom = flyingFrom;
 		this.flyingTo = flyingTo;
+		this.price = price;
 	}
 
 	public long getId() {

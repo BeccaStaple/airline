@@ -4,36 +4,31 @@ import java.util.Date;
 
 
 public class FlightDto {
-
-	
 	
 	private long id;
 	
-	
-
 	private String timeOfDeparture;
 	
-
 	private Date dateOfDeparture;
 	
-
 	private String flyingFrom;
 	
 	private String flyingTo;
 	
-
+	private double price;
 	
 	public FlightDto() {
 		
 	}
 
-	public FlightDto(long id, String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
+	public FlightDto(long id, String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo, double price) {
 		super();
 		this.id = id;
 		this.timeOfDeparture = timeOfDeparture;
 		this.dateOfDeparture = dateOfDeparture;
 		this.flyingFrom = flyingFrom;
 		this.flyingTo = flyingTo;
+		this.price = price;
 	}
 	
 	public long getId() {
@@ -74,6 +69,14 @@ public class FlightDto {
 
 	public void setFlyingTo(String flyingTo) {
 		this.flyingTo = flyingTo;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 	
