@@ -1,12 +1,10 @@
 package com.qa.airline.persistence.domain;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 import com.sun.istack.NotNull;
 
@@ -40,10 +38,7 @@ public class Customer {
 	@Setter 
 	private String email;
 	
-	@Getter 
-	@Setter
-	@OneToMany(mappedBy = "customer")
-	private List<Booking> booking;
+
 	
 	
 	

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,7 @@ import com.qa.airline.persistence.domain.Customer;
 import com.qa.airline.service.CustomerService;
 
 @RestController
+@Controller
 @RequestMapping("/customer")
 @CrossOrigin
 public class CustomerController {
@@ -27,12 +29,12 @@ public class CustomerController {
 		this.service = service;
 	}
 	
-	@PostMapping("/makeBooking")
+	@PostMapping("/makeCustomer")
 	public ResponseEntity<CustomerDto> create(@RequestBody Customer customer) {
 		return new ResponseEntity<CustomerDto>(this.service.create(customer), HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/returnBooking")
+	@GetMapping("/returnCustomer")
 	public ResponseEntity<List<CustomerDto>> read() {
 		return new ResponseEntity<List<CustomerDto>>(this.service.read(), HttpStatus.OK);
 	}

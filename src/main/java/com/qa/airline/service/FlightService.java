@@ -16,6 +16,12 @@ public class FlightService {
 	private FlightRepo repo;
 	private ModelMapper mapper;
 	
+	public FlightService(FlightRepo repo, ModelMapper mapper) {
+		super();
+		this.repo = repo;
+		this.mapper = mapper;
+	}
+	
 	public FlightDto mapToDto(Flight flight) {
 		return this.mapper.map(flight, FlightDto.class);
 	}

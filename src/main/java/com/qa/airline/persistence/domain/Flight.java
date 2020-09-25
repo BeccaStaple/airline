@@ -1,12 +1,10 @@
 package com.qa.airline.persistence.domain;
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 import com.sun.istack.NotNull;
 
@@ -32,7 +30,7 @@ public class Flight {
 	@NotNull
 	@Getter
 	@Setter
-	private Date dateOfDeparture;
+	private String dateOfDeparture;
 	
 	@Column
 	@NotNull
@@ -46,16 +44,13 @@ public class Flight {
 	@Setter
 	private String flyingTo;
 	
-	@Getter 
-	@Setter
-	@ManyToOne(targetEntity = Booking.class)
-	private Booking booking;
+
 	
 	public Flight() {
 		
 	}
 	
-	public Flight(String timeOfDeparture, Date dateOfDeparture, String flyingFrom, String flyingTo) {
+	public Flight(String timeOfDeparture, String dateOfDeparture, String flyingFrom, String flyingTo) {
 		super();
 		this.timeOfDeparture = timeOfDeparture;
 		this.dateOfDeparture = dateOfDeparture;

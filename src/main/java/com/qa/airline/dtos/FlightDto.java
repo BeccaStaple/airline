@@ -26,7 +26,7 @@ public class FlightDto {
 	@Setter
 	private String flyingFrom;
 	
-		@Getter
+	@Getter
 	@Setter
 	private String flyingTo;
 	
